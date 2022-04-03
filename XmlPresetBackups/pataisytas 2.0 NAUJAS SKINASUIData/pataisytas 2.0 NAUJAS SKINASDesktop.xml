@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ContentProperties DeviceType="Desktop">
+  <Component type="ScriptImage" id="Image1" x="0.0" y="0.0" text="back" width="700.0"
+             height="630.0" popupOnRightClick="0" fileName="{PROJECT_FOLDER}Deform2-1.01png.png"/>
+  <Component type="ScriptSlider" id="Knob1" x="509.0" y="308.0" stepSize="0.009999999776482582"
+             processorId="Script FX1" parameterId="sine2" text="antras daznis"
+             filmstripImage="{PROJECT_FOLDER}micro01.png" numStrips="99.0"
+             width="70.0" height="100.0" showValuePopup="Right"/>
+  <Component type="ScriptSlider" id="Knob2" x="92.0" y="310.0" stepSize="0.009999999776482582"
+             processorId="Script FX1" parameterId="Amount" text="amount" filmstripImage="{PROJECT_FOLDER}rate01.png"
+             numStrips="100.0" width="70.0" height="100.0" showValuePopup="Right"/>
+  <Component type="ScriptSlider" id="Knob3" x="301.0" y="309.0" stepSize="0.009999999776482582"
+             processorId="Script FX1" parameterId="Speed" text="speed" filmstripImage="{PROJECT_FOLDER}wow01.png"
+             numStrips="99.0" width="70.0" height="100.0" mouseSensitivity="0.5"
+             showValuePopup="Right"/>
+  <Component type="ScriptSlider" id="Knob4" x="622.0" y="60.0" stepSize="0.009999999776482582"
+             filmstripImage="{PROJECT_FOLDER}gain01.png" showValuePopup="Below"
+             numStrips="99.0" width="30.0" height="40.0" mode="Decibel" min="-60.0"
+             max="0.0" processorId="Script FX1" parameterId="Gain" middlePosition="-10.0"/>
+</ContentProperties>

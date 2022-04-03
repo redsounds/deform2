@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Network ID="DspNetwork">
+  <Node FactoryPath="container.chain" ID="DspNetwork" Bypassed="0">
+    <Nodes>
+      <Node ID="split" FactoryPath="container.split" Bypassed="0">
+        <Nodes>
+          <Node ID="chain1" FactoryPath="container.chain" Bypassed="0">
+            <Nodes>
+              <Node ID="one_pole1" FactoryPath="filters.one_pole" Bypassed="0">
+                <ComplexData>
+                  <Filters>
+                    <Filter Index="-1" EmbeddedData=""/>
+                  </Filters>
+                </ComplexData>
+                <Parameters>
+                  <Parameter MinValue="20.0" MaxValue="20000.0" SkewFactor="0.2299045622348785"
+                             ID="Frequency" Value="518.3240744709059"/>
+                  <Parameter MinValue="0.300000011920929" MaxValue="9.899999618530273" SkewFactor="0.2647178173065186"
+                             ID="Q" Value="1.111789323907962"/>
+                  <Parameter MinValue="-18.0" MaxValue="18.0" ID="Gain" Value="0.4320000000000022"/>
+                  <Parameter MinValue="0.0" MaxValue="1.0" SkewFactor="0.3010300099849701"
+                             ID="Smoothing" Value="0.003357909053085066"/>
+                  <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Mode" Value="0.0"/>
+                </Parameters>
+              </Node>
+            </Nodes>
+            <Parameters/>
+          </Node>
+          <Node ID="chain" FactoryPath="container.chain" Bypassed="0">
+            <Nodes>
+              <Node ID="reverb" FactoryPath="fx.reverb" Bypassed="0">
+                <Parameters>
+                  <Parameter MinValue="0.0" MaxValue="1.0" ID="Damping" Value="0.4880000000000001"/>
+                  <Parameter MinValue="0.0" MaxValue="1.0" ID="Width" Value="0.01600000000000001"/>
+                  <Parameter MinValue="0.0" MaxValue="1.0" ID="Size" Value="0.42"/>
+                </Parameters>
+              </Node>
+              <Node ID="jcompressor" FactoryPath="jdsp.jcompressor" Bypassed="0">
+                <ComplexData>
+                  <DisplayBuffers>
+                    <DisplayBuffer Index="-1"/>
+                  </DisplayBuffers>
+                </ComplexData>
+                <Parameters>
+                  <Parameter MinValue="-100.0" MaxValue="0.0" SkewFactor="5.422270774841309"
+                             ID="Treshold" Value="-36.66982892784682"/>
+                  <Parameter MinValue="1.0" MaxValue="32.0" SkewFactor="0.4658005833625793"
+                             ID="Ratio" Value="3.271479511853598"/>
+                  <Parameter MinValue="0.0" MaxValue="300.0" SkewFactor="0.3868528008460999"
+                             ID="Attack" Value="32.26916365387708"/>
+                  <Parameter MinValue="0.0" MaxValue="300.0" SkewFactor="0.2037950456142426"
+                             ID="Release" Value="2.601149548462387"/>
+                </Parameters>
+              </Node>
+              <Node ID="one_pole2" FactoryPath="filters.one_pole" Bypassed="0">
+                <ComplexData>
+                  <Filters>
+                    <Filter Index="-1" EmbeddedData=""/>
+                  </Filters>
+                </ComplexData>
+                <Parameters>
+                  <Parameter MinValue="20.0" MaxValue="20000.0" SkewFactor="0.2299045622348785"
+                             ID="Frequency" Value="627.8319378287089"/>
+                  <Parameter MinValue="0.300000011920929" MaxValue="9.899999618530273" SkewFactor="0.2647178173065186"
+                             ID="Q" Value="1.0"/>
+                  <Parameter MinValue="-18.0" MaxValue="18.0" ID="Gain" Value="0.0"/>
+                  <Parameter MinValue="0.0" MaxValue="1.0" SkewFactor="0.3010300099849701"
+                             ID="Smoothing" Value="0.003235557464997304"/>
+                  <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Mode" Value="1.0"/>
+                </Parameters>
+              </Node>
+            </Nodes>
+            <Parameters/>
+          </Node>
+        </Nodes>
+        <Parameters/>
+      </Node>
+    </Nodes>
+    <Parameters/>
+  </Node>
+</Network>
